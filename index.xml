@@ -6,7 +6,17 @@
     <description>Recent content on snorlaxgengar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Apr 2021 10:49:24 +0800</lastBuildDate><atom:link href="https://snorlaxgengar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 14:07:07 +0800</lastBuildDate><atom:link href="https://snorlaxgengar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keyed_caesar</title>
+      <link>https://snorlaxgengar.github.io/post/keyed_caesar/</link>
+      <pubDate>Tue, 20 Apr 2021 14:07:07 +0800</pubDate>
+      
+      <guid>https://snorlaxgengar.github.io/post/keyed_caesar/</guid>
+      <description>基于密钥的凯撒密码  密文：s0a6u3u1s0bv1a 密钥：guangtou 偏移：6,20,0,13,6,19,14,20 明文：y0u6u3h1y0uj1u
+ 代码 #include &amp;#34;catch2/catch_all.hpp&amp;#34;#include &amp;lt;string&amp;gt;#include &amp;lt;iostream&amp;gt; TEST_CASE(&amp;#34;Keyed Caesar&amp;#34;, &amp;#34;[Keyed Caesar]&amp;#34;) { std::string cipherText(&amp;#34;s0a6u3u1s0bv1a&amp;#34;); std::string key(&amp;#34;guangtou&amp;#34;); auto it = key.begin(); std::transform(cipherText.begin(), cipherText.end(), cipherText.begin(), [&amp;amp;it, &amp;amp;key](char c) { if (!std::isalpha(c)) { return c; } char k = *(it++); if (it == key.end()) { it = key.begin(); } // 需要处理偏移后溢出&amp;#39;z&amp;#39;的情况  return static_cast&amp;lt;char&amp;gt;((c - &amp;#39;a&amp;#39; + k - &amp;#39;a&amp;#39;) % 26 + &amp;#39;a&amp;#39;); }); REQUIRE(cipherText == &amp;#34;y0u6u3h1y0uj1u&amp;#34;); } </description>
+    </item>
+    
     <item>
       <title>Binary_search</title>
       <link>https://snorlaxgengar.github.io/post/binary_search/</link>
